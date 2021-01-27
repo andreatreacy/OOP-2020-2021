@@ -23,8 +23,20 @@ public class Main
         // What will get printed out??
 
         // 1. topcat, Garfield
-        // 2. garfield, Garfield 
+        // 2. garfield, Garfield - THIS ONE
 
+        Cat ginger = new Cat("Ginger");
+        System.out.println(ginger);     //Ginger
+        System.out.println(ginger.getNumLives());   //9 to start
 
+        //access the kill() method until the 9 lives run out
+        for(int i=0; i<10; i++)
+        {
+            ginger.kill();
+            System.out.println(ginger.getNumLives());
+        }
+
+        // THIS WONT WORK as topCat was made as an Animal not Cat
+        //System.out.println(topCat.getNumLives());
     }
 } 
